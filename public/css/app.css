@@ -1,10 +1,15 @@
 body {
-    background-image: url("../img/bg/crossword.png");
+    background-image: url("../img/bg/geometry2.png");
     /* background-color: #cccccc; */    
  }
 
 a {
     cursor: pointer;
+}
+
+#menu {
+    background-image: url("../img/bg/blue-wave-background.jpg") !important;
+    color: red !important;
 }
 
 .ui.menu .item img.logo {

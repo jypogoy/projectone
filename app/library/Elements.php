@@ -86,7 +86,7 @@ class Elements extends Component
                             <img class="ui avatar image" src="/' . $this->config->appName . '/public/img/avatar/avatar.png"><span style="padding-left: 10px;">' . $auth['name'] . '</span>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <div class="item"><a href="/' . $this->config->appName . '/session/changepassword"><div class="' . ($actionName == 'changepassword' ? 'disabled' : '') . ' item"><i class="key icon"></i>Change Password</div></a></div>
+                                <div class="item"><i class="key icon"></i>Change Password</div>
                             </div>
                         </div>';                   
                 }
