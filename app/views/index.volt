@@ -32,5 +32,8 @@
         {{ javascript_include('js/list.js') }}
         {{ javascript_include('js/message.js') }}
         {{ javascript_include('js/form.js') }} 
+
+        
+      </div>
     </body>
 </html>

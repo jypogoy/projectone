@@ -98,6 +98,25 @@ class Elements extends Component
                     echo $this->tag->linkTo([$controller != 'index' ? $controller . ($controller == 'session' ? '/' . $option['action'] : '') : '', (isset($option['iconClass']) ? '<i class="' . $option['iconClass'] . '"></i>' : '') . $option['caption'], 'class' => 'item']);
                 }
             }
+
+            echo '<div class="ui simple dropdown item">
+Dropdown <i class="dropdown icon"></i>
+<div class="menu">
+  <a class="item" href="#">Link Item</a>
+  <a class="item" href="#">Link Item</a>
+  <div class="divider"></div>
+  <div class="header">Header Item</div>
+  <div class="item">
+    <i class="dropdown icon"></i>
+    Sub Menu
+    <div class="menu">
+      <a class="item" href="#">Link Item</a>
+      <a class="item" href="#">Link Item</a>
+    </div>
+  </div>
+  <a class="item" href="#">Link Item</a>
+</div>';
+
             if ($position == 'right') {
                 echo '</div>';
             }    

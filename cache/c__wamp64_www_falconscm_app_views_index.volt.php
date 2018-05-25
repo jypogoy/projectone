@@ -32,5 +32,8 @@
         <?= $this->tag->javascriptInclude('js/list.js') ?>
         <?= $this->tag->javascriptInclude('js/message.js') ?>
         <?= $this->tag->javascriptInclude('js/form.js') ?> 
+
+        
+      </div>
     </body>
 </html>

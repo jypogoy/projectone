@@ -1,6 +1,6 @@
 <nav class="ui fixed menu" id="menu">
     <a href="#" class="header item">
-        <img class="logo" src="/<?= $appName ?>/public/img/falcon.png" style="width: 32px; height: 32px;"><?= Phalcon\Text::upper($appName) ?>
+        <img class="logo" src="/<?= $appName ?>/public/img/falcon-icon.png" style="width: 32px; height: 32px;"><?= Phalcon\Text::upper($appName) ?>
     </a>
     <?= $this->elements->getMenu() ?>
 </nav>

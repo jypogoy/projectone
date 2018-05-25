@@ -1,6 +1,6 @@
 <nav class="ui fixed menu" id="menu">
     <a href="#" class="header item">
-        <img class="logo" src="/{{ appName }}/public/img/falcon.png" style="width: 32px; height: 32px;">{{ appName | upper }}
+        <img class="logo" src="/{{ appName }}/public/img/falcon-icon.png" style="width: 32px; height: 32px;">{{ appName | upper }}
     </a>
     {{ elements.getMenu() }}
 </nav>
