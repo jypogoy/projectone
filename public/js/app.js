@@ -1,37 +1,11 @@
-$(function () {
-    toastr.options = { 
-        "positionClass" : "toast-top-center toastr-custom-pos"
-    };
+$(function() {
 
-    $('.ui.checkbox').checkbox();       
     $('.ui.dropdown').dropdown();
+    $('.ui.accordion').accordion();
 
-    $('.policy').click(function(e) {
-        e.preventDefault();
-        PolicyModal.show();
+    // bind "hide and show vertical menu" event to top right icon button 
+    $('.ui.toggle.button').click(function() {
+        $('.ui.vertical.menu').toggle("250", "linear")
     });
 
-    var msgEl = $('.ui.message:not(.static)');
-    if (msgEl.html() && msgEl.html() != '') {
-        if (msgEl.hasClass('error')) {
-            composeMessagePrompt('error', msgEl.html());
-        } else if (msgEl.hasClass('success')) {
-            composeMessagePrompt('success', msgEl.html());
-        } else if (msgEl.hasClass('notice')) {
-            composeMessagePrompt('info', msgEl.html());
-        } else if (msgEl.hasClass('warning')) {
-            composeMessagePrompt('warning', msgEl.html());
-        }
-    }
 });
-
-function composeMessagePrompt(type, msg) {
-    $(document.body).append('<script>' +
-                        '$(function () {' +
-                            'toastr.options = {' +
-                                '"positionClass" : "toast-top-center toastr-custom-pos"' +
-                            '};' +
-                            'toastr.' + type + '("' + msg + '");' +
-                        '})' +
-                    '</script>');
-}

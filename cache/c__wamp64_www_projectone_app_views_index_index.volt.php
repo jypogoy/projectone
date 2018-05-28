@@ -1,4 +1,4 @@
-{{ stylesheet_link('css/home.css') }}
+<?= $this->tag->stylesheetLink('css/home.css') ?>
 
 <div class="ui container">
     <div class="ui message">

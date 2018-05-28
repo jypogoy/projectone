@@ -6,7 +6,7 @@ class ControllerBase extends Controller
 {
     protected function initialize()
     {
-        $this->tag->prependTitle('Falcon SCM | ');
+        $this->tag->prependTitle('ProjectOne | ');
         $this->view->appName = $this->config->appName; 
         $this->view->setTemplateAfter('main');               
     }
