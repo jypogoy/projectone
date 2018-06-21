@@ -14,6 +14,7 @@
         
         <?= $this->tag->stylesheetLink('css/common.css') ?>
         <?= $this->tag->stylesheetLink('css/menu.css') ?>
+        <?= $this->tag->stylesheetLink('css/app.css') ?>
                 
     </head>
     <body>    

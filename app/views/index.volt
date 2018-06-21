@@ -14,6 +14,7 @@
         
         {{ stylesheet_link('css/common.css') }}
         {{ stylesheet_link('css/menu.css') }}
+        {{ stylesheet_link('css/app.css') }}
                 
     </head>
     <body>    

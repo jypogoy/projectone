@@ -12,7 +12,7 @@
 </div>#}
 
 <div class="ui fixed borderless huge menu">
-    <div class="ui container grid">
+    <div class="ui fluid container grid">
         <div class="computer only row">
             <a class="header item"><img class="logo" src="img/falcon-icon.png" style="width: 32px; height: 32px; margin-right: 10px;">ProjectOne</a>
             <a class="active item">Home</a>
