@@ -29,13 +29,22 @@
                     <div class="item">One more seperated link</div>
                 </div>
             </a>
+            <div class="ui simple dropdown item">
+      More
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"><i class="edit icon"></i> Edit Profile</a>
+        <a class="item"><i class="globe icon"></i> Choose Language</a>
+        <a class="item"><i class="settings icon"></i> Account Settings</a>
+      </div>
+    </div>
             <div class="right menu">
                 <a class="ui dropdown item"><img class="ui avatar image" src="img/avatar/avatar.png"><span style="padding-left: 10px;">Jeffrey Pogoy</span><i class="dropdown icon"></i>
                     <div class="menu">
-                        <div class="item">Profile</div>
-                        <div class="item">Settings</div>
+                        <div class="item"><i class="edit icon"></i>Edit Profile</div>
+                        <div class="item"><i class="settings icon"></i>Account Settings</div>
                         <div class="ui divider"></div>
-                        <div class="item">Sign out</div>
+                        <div class="item"><i class="sign out icon"></i>Sign out</div>
                     </div>
                 </a>
             </div>
@@ -75,3 +84,5 @@
 </div>
 
 {{ content() }}
+
+{% include 'footer.volt' %} 

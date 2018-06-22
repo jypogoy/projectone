@@ -11,25 +11,26 @@ class Elements extends Component
 {
     private $_headerMenu = [
         'left' => [
-            'index' => [
+            'home' => [
                 'caption'   => 'Home',
-                'action'    => 'index',
+                'action'    => 'home',
                 'iconClass' => 'home icon'
             ],
-            'manage' => [
-                'caption'   => 'Manage',
+            'edits' => [
+                'caption'   => 'Record Edit',
                 'action'    => 'index',
-                'iconClass' => 'globe icon'
-            ],
-            '#' => [
-                'caption'   => 'Reports',
-                'iconClass' => 'paste icon'
+                'iconClass' => 'pencil icon'
             ],
             'about' => [
                 'caption'   => 'About',
                 'action'    => 'index',
                 'iconClass' => 'info circle icon'
-            ]
+            ],
+            // 'contact' => [
+            //     'caption'   => 'Contact',
+            //     'action'    => 'index',
+            //     'iconClass' => 'volume control phone icon'
+            // ]
         ],
         'right' => [
             'session'       => [
@@ -59,13 +60,16 @@ class Elements extends Component
                 'action' => 'end',
                 'iconClass' => 'power off icon'
             ];
+            if (!$auth['canEdit']) unset($this->_headerMenu['left']['edits']);
         } else {
             unset($this->_headerMenu['left']['home']);
+            unset($this->_headerMenu['left']['edits']);
         }
 
         // For initial login: Remove menu items.
         if ($this->session->get('initLogin')) { 
             unset($this->_headerMenu['left']['home']);
+            unset($this->_headerMenu['left']['edits']);
         }
 
         $controllerName = $this->view->getControllerName();
@@ -75,20 +79,13 @@ class Elements extends Component
                 echo '<div class="right menu">';   
                 $auth = $this->session->get('auth');
                 if ($auth) {            
-                    // echo '<div class="ui pointing dropdown link item user-profile-dropdown">' . 
-                    //         '<img class="ui avatar image" src="/' . $this->config->appName . '/public/img/avatar/avatar.png"><span style="padding-left: 10px;">' . $auth['name'] . '</span>' . 
-                    //         '<i class="dropdown icon"></i>' .
-                    //         '<div class="menu">' .
-                    //             '<a href="/' . $this->config->appName . '/session/changepassword"><div class="' . ($actionName == 'changepassword' ? 'disabled' : '') . ' item"><i class="key icon"></i>Change Password</div></a>' .
-                    //         '</div>' .
-                    //     '</div>'; 
-                    echo '<div class="ui right dropdown item">
-                            <img class="ui avatar image" src="/' . $this->config->appName . '/public/img/avatar/avatar.png"><span style="padding-left: 10px;">' . $auth['name'] . '</span>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <div class="item"><i class="key icon"></i>Change Password</div>
-                            </div>
-                        </div>';                   
+                    echo '<div class="ui pointing dropdown link item user-profile-dropdown">' . 
+                            '<img class="ui avatar image" src="/gpap/public/img/avatar/avatar.png"><span style="padding-left: 10px;">' . $auth['name'] . '</span>' . 
+                            '<i class="dropdown icon"></i>' .
+                            '<div class="menu">' .
+                                '<a href="/gpap/session/changepassword"><div class="' . ($actionName == 'changepassword' ? 'disabled' : '') . ' item"><i class="key icon"></i>Change Password</div></a>' .
+                            '</div>' .
+                        '</div>';                    
                 }
             }                
             foreach ($menu as $controller => $option) {
@@ -98,25 +95,6 @@ class Elements extends Component
                     echo $this->tag->linkTo([$controller != 'index' ? $controller . ($controller == 'session' ? '/' . $option['action'] : '') : '', (isset($option['iconClass']) ? '<i class="' . $option['iconClass'] . '"></i>' : '') . $option['caption'], 'class' => 'item']);
                 }
             }
-
-            echo '<div class="ui simple dropdown item">
-Dropdown <i class="dropdown icon"></i>
-<div class="menu">
-  <a class="item" href="#">Link Item</a>
-  <a class="item" href="#">Link Item</a>
-  <div class="divider"></div>
-  <div class="header">Header Item</div>
-  <div class="item">
-    <i class="dropdown icon"></i>
-    Sub Menu
-    <div class="menu">
-      <a class="item" href="#">Link Item</a>
-      <a class="item" href="#">Link Item</a>
-    </div>
-  </div>
-  <a class="item" href="#">Link Item</a>
-</div>';
-
             if ($position == 'right') {
                 echo '</div>';
             }    
