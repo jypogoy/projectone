@@ -30,16 +30,69 @@
                 </div>
             </a>
             <div class="ui simple dropdown item">
-      More
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item"><i class="edit icon"></i> Edit Profile</a>
-        <a class="item"><i class="globe icon"></i> Choose Language</a>
-        <a class="item"><i class="settings icon"></i> Account Settings</a>
-      </div>
-    </div>
+                More
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item"><i class="edit icon"></i> Edit Profile</a>
+                    <a class="item"><i class="globe icon"></i> Choose Language</a>
+                    <a class="item"><i class="settings icon"></i> Account Settings</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Multi Cols
+                <i class="dropdown icon"></i>
+                <div class="menu" style="width: 800px;">
+                    <div class="ui three column relaxed divided grid">
+                        <div class="column">
+                            <h4 class="ui header">Business</h4>
+                            <div class="ui link list">
+                                <a class="item">Design &amp; Urban Ecologies</a>
+                                <a class="item">Fashion Design</a>
+                                <a class="item">Fine Art</a>
+                                <a class="item">Strategic Design</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">Liberal Arts</h4>
+                            <div class="ui link list">
+                                <a class="item">Anthropology</a>
+                                <a class="item">Economics</a>
+                                <a class="item">Media Studies</a>
+                                <a class="item">Philosophy</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">Social Sciences</h4>
+                            <div class="ui link list">
+                                <a class="item">Food Studies</a>
+                                <a class="item">Journalism</a>
+                                <a class="item">Non Profit Management</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
             <div class="right menu">
-                <a class="ui dropdown item"><img class="ui avatar image" src="img/avatar/avatar.png"><span style="padding-left: 10px;">Jeffrey Pogoy</span><i class="dropdown icon"></i>
+                <a class="ui item">
+                    <i class="icon bell outline"></i>
+                    <div class="floating ui red label" style="padding:2px 3px; top: 15px; left: 45px;">
+                        <span>12</span>
+                    </div>
+                </a>
+                <a class="ui item">
+                    <i class="icon tasks"></i>
+                    <div class="floating ui orange label" style="padding:2px 3px; top: 15px; left: 45px;">
+                        <span>12</span>
+                    </div>
+                </a>
+                <a class="ui item">
+                    <i class="icon mail outline"></i>
+                    <div class="floating ui blue label" style="padding:2px 3px; top: 15px; left: 45px;">
+                        <span>12</span>
+                    </div>
+                </a>
+                <a class="ui dropdown item">
+                    <img class="ui avatar image" src="img/avatar/elliot.jpg"><span style="padding-left: 10px;">Jeffrey Pogoy</span><i class="dropdown icon"></i>
                     <div class="menu">
                         <div class="item"><i class="edit icon"></i>Edit Profile</div>
                         <div class="item"><i class="settings icon"></i>Account Settings</div>

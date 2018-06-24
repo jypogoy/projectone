@@ -1,3 +1,6 @@
+.notification-icon {
+    padding:2px 3px; top: 15px; left: 45px;
+}
 
 .ui.fluid.container {
     margin-left: 0 !important;
