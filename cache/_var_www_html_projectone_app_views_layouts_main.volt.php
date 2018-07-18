@@ -1,15 +1,4 @@
-{#<nav class="ui fixed menu" id="menu">
-    <a href="#" class="header item">
-        <img class="logo" src="/{{ appName }}/public/img/falcon-icon.png" style="width: 32px; height: 32px;">{{ appName | upper }}
-    </a>
-    {{ elements.getMenu() }}
-</nav>
 
-<div class="ui main stackable container">
-    {{ flash.output() }}
-    {{ content() }}    
-    <div class="footer text-muted"><p>&copy; Davao Fibre, Copyright 2018, All rights reserved.</p></div>
-</div>#}
 
 <div class="ui fixed borderless small menu">
     <div class="ui fluid container grid">
@@ -155,8 +144,8 @@
     </a>
 </div>
 <div class="pusher">
-    {{ content() }}    
-    {% include 'footer.volt' %} 
+    <?= $this->getContent() ?>    
+    <div class="ui footer text-muted"><p>&copy; Copyright 2018, All rights reserved.</p></div> 
 </div>
 
 <script>
